@@ -7,7 +7,7 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      bebas: "Bebas Neue, cursive",
+      bebas: "Bebas Neue",
     },
     extend: {
       container: {

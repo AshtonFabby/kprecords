@@ -2,14 +2,30 @@ import Image from "next/image";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
 
+import { useState } from "react";
+
 const Nav = () => {
+  const [toggle, setToggle] = useState(false);
   const showNav = (e) => {
-    console.log("button clicked");
+    const flow = document.querySelector("#overflow");
+    const left = document.querySelector("#left");
+
+    if (toggle === false) {
+      flow.classList.remove("overflow-hidden");
+      left.classList.remove("left-full");
+
+      setToggle(true);
+    } else {
+      flow.classList.add("overflow-hidden");
+      left.classList.add("left-full");
+
+      setToggle(false);
+    }
   };
 
   return (
-    <nav className=" px-4 sm:px-8 lg:px-16  ">
-      <div className="h-10 my-8 flex justify-between items-center">
+    <nav className="">
+      <div className="h-10 my-8 flex justify-between items-center px-4 sm:px-8 lg:px-16">
         {/* logo goes here */}
         <Link href="/">
           <div className="logo flex items-center gap-3">
@@ -79,38 +95,43 @@ const Nav = () => {
           </svg>
         </button>
       </div>
-      <div className="mobile-items duration-500 left-full hidden absolute bg-[#141414] w-11/12 sm:hidden">
-        <div className="mobile-items sm:hidden text-xl text-right py-10">
-          <Link href="/">
-            <p className=" hover:bg-accent duration-150 px-7 py-3 w-full">
-              Home
-            </p>
-          </Link>
-          <Link href="/about">
-            <p className=" hover:bg-accent duration-150 px-7 py-3 w-full">
-              Sobre a KP
-            </p>
-          </Link>
-          <Link href="/artists">
-            <p className=" hover:bg-accent duration-150 px-7 py-3 w-full">
-              Artistas
-            </p>
-          </Link>
-          <Link href="/services">
-            <p className=" hover:bg-accent duration-150 px-7 py-3 w-full">
-              Serviços
-            </p>
-          </Link>
-          <Link href="/projects">
-            <p className=" hover:bg-accent duration-150 px-7 py-3 w-full">
-              Projectos
-            </p>
-          </Link>
-          <Link href="/contact">
-            <p className=" hover:bg-accent duration-150 px-7 py-3 w-full">
-              Contactos
-            </p>
-          </Link>
+      <div id="overflow" className="relative overflow-hidden ">
+        <div
+          id="left"
+          className=" left-full mobile-items absolute z-10 duration-500 ease-out w-full bg-[#141414] sm:hidden "
+        >
+          <div className="mobile-items sm:hidden text-xl text-right py-10">
+            <Link href="/">
+              <p className=" hover:bg-accent duration-150 px-7 py-3 w-full">
+                Home
+              </p>
+            </Link>
+            <Link href="/about">
+              <p className=" hover:bg-accent duration-150 px-7 py-3 w-full">
+                Sobre a KP
+              </p>
+            </Link>
+            <Link href="/artists">
+              <p className=" hover:bg-accent duration-150 px-7 py-3 w-full">
+                Artistas
+              </p>
+            </Link>
+            <Link href="/services">
+              <p className=" hover:bg-accent duration-150 px-7 py-3 w-full">
+                Serviços
+              </p>
+            </Link>
+            <Link href="/projects">
+              <p className=" hover:bg-accent duration-150 px-7 py-3 w-full">
+                Projectos
+              </p>
+            </Link>
+            <Link href="/contact">
+              <p className=" hover:bg-accent duration-150 px-7 py-3 w-full">
+                Contactos
+              </p>
+            </Link>
+          </div>
         </div>
       </div>
     </nav>
