@@ -44,9 +44,19 @@ const Footer = () => {
           <h1 className=" mt-3 lg:mt-0">CONTACTE-NOS</h1>
 
           <p className="mt-2">
-            <Link href="tel:+244923771656">+244923771656</Link> /{" "}
-            <Link href="tel:+244925008917">+244925008917</Link>{" "}
-            <a href="mailto:geral@kprecordz.com">geral@kprecordz.com</a>
+            <Link className=" hover:text-accent" href="tel:+244923771656">
+              +244923771656
+            </Link>{" "}
+            /{" "}
+            <Link className=" hover:text-accent" href="tel:+244925008917">
+              +244925008917
+            </Link>{" "}
+            <Link
+              className=" hover:text-accent"
+              href="mailto:geral@kprecordz.com"
+            >
+              geral@kprecordz.com
+            </Link>
           </p>
 
           <div className="links flex gap-6 mt-3">
@@ -75,8 +85,8 @@ const Footer = () => {
         </div>
       </div>
       <div className="bottom text-zinc-700 flex justify-between my-10">
-        <p>copyrright KP Records 2022</p>
-        <Link href="#" className="">
+        <p>copyright KP Records 2022</p>
+        <Link href="https://digitalvague.com/" target="_blank">
           Designed by Digital Vague
         </Link>
       </div>

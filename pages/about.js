@@ -80,8 +80,8 @@ const About = () => {
               icon="map:gym"
               className=" cursor-pointer text-3xl text-accent"
             />
-            <h1 className=" text-white">nossa MISSÃO</h1>
-            <p>
+            <h1 className=" text-white">nossa Motivação</h1>
+            <p className="hidden">
               Ser uma produtora de referência em Angola e além fronteiras,
               proporcionando experiências únicas e uma gama de produtos e
               serviços de excelência.
@@ -170,12 +170,12 @@ const About = () => {
               <TeamCard
                 image="/images/04.png"
                 name="gilberto lima"
-                position="Founder & CEO"
+                position="Director Técnico e de Meios"
               />
               <TeamCard
                 image="/images/05.png"
                 name="Mauro Lima"
-                position="Director para a Área Artística"
+                position="Director para área de agenciamento e promoção"
               />
             </div>
           </div>

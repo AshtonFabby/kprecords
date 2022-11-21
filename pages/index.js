@@ -1,16 +1,20 @@
 import Head from "next/head";
 import Image from "next/image";
-import { Icon } from "@iconify/react";
 import AboutComp from "./components/AboutComp";
 import Values from "./components/Value";
 
 import { useState } from "react";
-import Footer from "./components/Footer";
+import Hero from "./components/hero";
+
+import { Swiper, SwiperSlide, Autoplay } from "swiper/react";
+
+import "swiper/css";
+import Link from "next/link";
 
 export default function Home() {
   const [aboutImage, setAboutImage] = useState("/images/mission.png");
   const [aboutText, setAboutText] = useState(
-    "sermos um grupo que investe no capital humano e altamente competitivo que actue de forma abrangente no ramo musical, através de um portfólio de produtos de alta qualidade."
+    "Descobrir, Capacitar e Integrar talentos anónimos no mercado artístico, dando-lhes a oportunidade de desenvolverem as suas habilidades, de modo a realizarem os seus sonhos, agregarem diversidade a cultura e serem agentes de mudança para a sociedade."
   );
 
   const changeVission = () => {
@@ -27,15 +31,7 @@ export default function Home() {
       "01. Paixão e Fé, 02. Integridade, 03 Autenticidade, 04 Criatividade, 05 trabalho em equipa, _________"
     );
   };
-  const changeMission = () => {
-    setAboutImage("/images/mission-02.png");
-
-    const text2 =
-      "sermos um grupo que investe no capital humano e altamente competitivo que actue de forma abrangente no ramo musical, através de um portfólio de produtos de alta qualidade.";
-    setAboutText(
-      "sermos um grupo que investe no capital humano e altamente competitivo que actue de forma abrangente no ramo musical, através de um portfólio de produtos de alta qualidade."
-    );
-  };
+  const changeMission = () => {};
   return (
     <div className="">
       <Head>
@@ -45,45 +41,54 @@ export default function Home() {
       </Head>
 
       <main className="">
-        <div className="hero bg-[url('/images/hela-mobile.png')] sm:bg-[url('/images/hela.png')] bg-no-repeat max-sm:bg-cover sm:bg-right flex flex-col justify-center h-[60vh]">
-          <div className=" w-max container">
-            <div className=" w-max font-bebas border-[3px] border-accent text-accent px-5 py-2 text-xl uppercase">
-              #artista
-            </div>
-            <h2 className=" font-bebas uppercase text-4xl sm:text-6xl  2xl:text-8xl mt-10">
-              Hélia Sandra <br />
-              Lançamentos: Mais Tempero
-            </h2>
-
-            <div className="links mt-10 md:flex justify-between ">
-              <div className=" w-max font-bebas border-[3px] text-accent border-accent px-5 py-2 text-xl uppercase mt-5">
-                fala com o agente
-              </div>
-
-              <div className=" w-max font-bebas text-xl uppercase text-accent flex gap-5 items-center mt-10 md:mt-0">
-                <p>Sobre o Artista</p>
-
-                {/* <Icon
-                icon="ant-design:arrow-right-outlined"
-                className=" cursor-pointer"
-              /> */}
-
-                <svg
-                  width="34"
-                  height="17"
-                  viewBox="0 0 44 17"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M43.8048 7.92219L37.1164 0.0931178C37.065 0.0334268 36.9995 0 36.9305 0H35.3637C35.2327 0 35.1725 0.219663 35.2716 0.33427L41.4715 7.5927H0.141629C0.0637332 7.5927 0 7.67865 0 7.78371V9.21629C0 9.32135 0.0637332 9.4073 0.141629 9.4073H41.4697L35.2699 16.6657C35.1707 16.7827 35.2309 17 35.3619 17H36.9818C37.0154 17 37.0491 16.9833 37.0739 16.9522L43.8048 9.07781C43.8661 9.00593 43.9152 8.91716 43.9489 8.81748C43.9826 8.7178 44 8.60954 44 8.5C44 8.39046 43.9826 8.2822 43.9489 8.18252C43.9152 8.08284 43.8661 7.99407 43.8048 7.92219Z"
-                    fill="#FDB200"
-                  />
-                </svg>
-              </div>
-            </div>
-          </div>
-        </div>
+        <Swiper
+          spaceBetween={30}
+          slidesPerView={1}
+          loop={true}
+          onSlideChange={() => console.log("slide change")}
+          onSwiper={(swiper) => console.log(swiper)}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+        >
+          <SwiperSlide>
+            <Hero
+              name="Hélia Sandra"
+              botText="Lançamentos: Mais Tempero"
+              songLink="https://youtu.be/uZUxCjsvILk"
+              about=""
+              heroImage="/images/hela.png"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Hero
+              name="Hélia Sandra"
+              botText="Lançamentos: Mais Tempero"
+              songLink="https://youtu.be/uZUxCjsvILk"
+              about=""
+              heroImage="/images/hela.png"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Hero
+              name="Hélia Sandra"
+              botText="Lançamentos: Mais Tempero"
+              songLink="https://youtu.be/uZUxCjsvILk"
+              about=""
+              heroImage="/images/hela.png"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Hero
+              name="Hélia Sandra"
+              botText="Lançamentos: Mais Tempero"
+              songLink="https://youtu.be/uZUxCjsvILk"
+              about=""
+              heroImage="/images/hela.png"
+            />
+          </SwiperSlide>
+        </Swiper>
         <div className="about hidden pt-12 lg:flex px-20">
           <div className="left w-1/2">
             <Image src={aboutImage} height={416} width={750} alt="Mission" />
@@ -114,7 +119,7 @@ export default function Home() {
           </div>
         </div>
         <div className="about container lg:hidden mt-10">
-          <h1 className=" ppercase">sobre nós</h1>
+          <h1 className=" uppercase">sobre nós</h1>
           <AboutComp
             image="/images/mission.png"
             title="nossa MISSÃO"
@@ -190,26 +195,26 @@ export default function Home() {
             alt="band logo"
           />
         </div>
-        <div className=" cf mt-16 lg:grid grid-cols-12">
+        <div className=" cf mt-16 lg:grid grid-cols-12 gap-10 ">
           <div className="left col-span-7">
             <h1>Canta e ENCANTA </h1>
-            <p>
-              Inicialmente como um projecto social ficado apenas em ajudar
-              grupos pequenos com bens de primeira necessidade, criado por Mauro
-              Lima (actual Director para a Área de Agenciamento), foi ganhando
-              consistência com a integração de novos talentos (cantores) na
-              altura conhecidos em Viana, que ajudavam na sensibilização da
-              população para a recolha dos bens.
+            <p className=" text-justify">
+              É um concurso de Canto anual, organizado pela KP Records no âmbito
+              da sua responsabilidade social, onde talentos brutos são
+              identificados e os vencedores integrados à produtora.
               <br />
-              <br /> Com a aderência de mais e mais cantores, o fundador
-              resolver agenciar os mesmos e durante este processo cresceu o
-              desejo de abrir uma produtora que daria continuidade ao projecto
-              social de forma mais abrangente e diversificada; assim nasceu aos
-              20 de Agosto de 2017, a KP Records.
+              <br /> No decorrer do concurso todos os participantes são
+              acompanhados por professores de canto e directores artísticos, e
+              nas galas atuam em companhia da grande Banda Kompasso.
               <br />
-              <br /> Kp Records “knowledge Palace” ou Palácio do Conhecimento é
-              acima de tudo uma escola de capacitação e transformação
-              de Capital Humano.
+              <br /> Mais do que ganhar, o Canta e Encanta oferece uma
+              experiência única e transformadora.Uma viagem emocional profunda
+              capaz de mudar crenças (consciente ou inconscientemente) e
+              alterar comportamentos.
+              <br />
+              <br /> Deste projecto maravilhosa foram descobertos talentos como
+              Hélia Sandra , Daniel Correia , Adolvera Massaqui
+              e muitos outros .
             </p>
           </div>
 
@@ -224,36 +229,38 @@ export default function Home() {
         <div className="cf mt-[300px] md:mt-[430px] lg:mt-20 ">
           <h1 className=" text-center">Trabalhos Recentes</h1>
           <div className=" grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5  justify-evenly gap-5 mt-5 ">
-            <Image
-              src="/images/album.png"
-              height={258}
-              width={258}
-              alt="recent"
-            />
-            <Image
-              src="/images/album-02.png"
-              height={258}
-              width={258}
-              alt="recent"
-            />
-            <Image
-              src="/images/album-03.png"
-              height={258}
-              width={258}
-              alt="recent"
-            />
-            <Image
-              src="/images/album-04.png"
-              height={258}
-              width={258}
-              alt="recent"
-            />
-            <Image
-              src="/images/album.png"
-              height={258}
-              width={258}
-              alt="recent"
-            />
+            <Link href="https://youtu.be/uZUxCjsvILk" target="_blank">
+              <Image
+                src="/images/album.png"
+                height={258}
+                width={258}
+                alt="recent"
+              />
+            </Link>
+            <Link href="https://youtu.be/jIaG3UddVSY" target="_blank">
+              <Image
+                src="/images/album-02.png"
+                height={258}
+                width={258}
+                alt="recent"
+              />
+            </Link>
+            <Link href="https://youtu.be/uZUxCjsvILk" target="_blank">
+              <Image
+                src="/images/album-03.png"
+                height={258}
+                width={258}
+                alt="recent"
+              />
+            </Link>
+            <Link href="https://youtu.be/uZUxCjsvILk" target="_blank">
+              <Image
+                src="/images/album-04.png"
+                height={258}
+                width={258}
+                alt="recent"
+              />
+            </Link>
           </div>
         </div>
       </main>

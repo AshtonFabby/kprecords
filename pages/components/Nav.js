@@ -5,6 +5,8 @@ import Link from "next/link";
 import { useState } from "react";
 
 const Nav = () => {
+  const [ishown, setIsShown] = useState(false);
+  const [ishown2, setIsShown2] = useState(false);
   const [toggle, setToggle] = useState(false);
   const showNav = (e) => {
     const flow = document.querySelector("#overflow");
@@ -24,7 +26,7 @@ const Nav = () => {
   };
 
   return (
-    <nav className="">
+    <nav className=" z-50 ">
       <div className="h-10 my-8 flex justify-between items-center px-4 sm:px-8 lg:px-16">
         {/* logo goes here */}
         <Link href="/">
@@ -51,12 +53,64 @@ const Nav = () => {
           <Link href="/about">
             <p className=" hover:text-accent duration-300">Sobre a KP</p>
           </Link>
-          <Link href="/artists">
-            <p className=" hover:text-accent duration-300">Artistas</p>
-          </Link>
-          <Link href="/services">
-            <p className=" hover:text-accent duration-300">Serviços</p>
-          </Link>
+          <button
+            onMouseEnter={() => setIsShown(true)}
+            onMouseLeave={() => setIsShown(false)}
+          >
+            <p className=" hover:text-accent duration-300 flex items-center gap-1">
+              Artistas
+              <Icon
+                icon="material-symbols:keyboard-arrow-down"
+                className=" cursor-pointer"
+              />
+            </p>
+            {ishown && (
+              <div className=" absolute z-50 bg-[#0c0c0c] grid gap-4  p-3">
+                <Link href="/artists">
+                  <p className=" hover:text-accent">Cantores</p>
+                </Link>
+                <Link href="/band">
+                  <p className=" hover:text-accent">Banda Kompasso</p>
+                </Link>
+              </div>
+            )}
+          </button>
+          <button
+            onMouseEnter={() => setIsShown2(true)}
+            onMouseLeave={() => setIsShown2(false)}
+          >
+            <p className=" hover:text-accent duration-300 flex items-center gap-1">
+              Serviços
+              <Icon
+                icon="material-symbols:keyboard-arrow-down"
+                className=" cursor-pointer"
+              />
+            </p>
+            {ishown2 && (
+              <div className=" -ml-20 absolute z-50 bg-[#0c0c0c] grid gap-4  p-3">
+                <Link href="/services#beats">
+                  <p className=" hover:text-accent">Produção de Beats</p>
+                </Link>
+                <Link href="/services#writing">
+                  <p className=" hover:text-accent">Composição de Letras</p>
+                </Link>
+                <Link href="/services#sing">
+                  <p className=" hover:text-accent">Aulas de canto</p>
+                </Link>
+                <Link href="/services#da">
+                  <p className=" hover:text-accent">Direção Artística</p>
+                </Link>
+                <Link href="/services#vid">
+                  <p className=" hover:text-accent">
+                    Fotografia e Produção de Videoclipes
+                  </p>
+                </Link>
+                <Link href="/services">
+                  <p className=" hover:text-accent">Aulas de Instrumentos</p>
+                </Link>
+              </div>
+            )}
+          </button>
           <Link href="/projects">
             <p className=" hover:text-accent duration-300">Projectos</p>
           </Link>
@@ -68,9 +122,24 @@ const Nav = () => {
         {/**socials here */}
 
         <div className="socials md:flex gap-2 text-accent text-lg hidden ">
-          <Icon icon="uit:facebook-f" className=" cursor-pointer" />
-          <Icon icon="bxl:instagram" className=" cursor-pointer" />
-          <Icon icon="ph:youtube-logo-light" className=" cursor-pointer" />
+          <Link
+            href="https://www.facebook.com/kprecordscompany?mibextid=LQQJ4d"
+            target="_blank"
+          >
+            <Icon icon="uit:facebook-f" className=" cursor-pointer" />
+          </Link>
+          <Link
+            href="https://instagram.com/kprecords_oficial?igshid=YWJhMjlhZTc="
+            target="_blank"
+          >
+            <Icon icon="bxl:instagram" className=" cursor-pointer" />
+          </Link>
+          <Link
+            href="https://youtube.com/@kprecordsheliasandra"
+            target="_blank"
+          >
+            <Icon icon="ph:youtube-logo-light" className=" cursor-pointer" />
+          </Link>
         </div>
 
         {/*mobile nav*/}

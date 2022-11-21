@@ -18,7 +18,10 @@ const Services = () => {
           satisfação do cliente em primeiro lugar.
         </p>
       </div>
-      <section className=" cf mt-12 lg:grid grid-cols-12 gap-5 items-center ">
+      <section
+        id="beats"
+        className="  cf mt-12 lg:grid grid-cols-12 gap-5 items-center "
+      >
         <div className=" col-span-8">
           <h1>Produção de Beats</h1>
           <p>
@@ -39,7 +42,10 @@ const Services = () => {
           className=" mt-5 col-span-4 w-full"
         />
       </section>
-      <section className=" cf mt-12 lg:grid grid-cols-12 gap-5 items-center ">
+      <section
+        id="writing"
+        className=" cf mt-12 lg:grid grid-cols-12 gap-5 items-center "
+      >
         <div className=" col-span-9">
           <h1>composição de letras</h1>
           <p>
@@ -60,7 +66,10 @@ const Services = () => {
           className=" mt-5 col-span-3 w-full"
         />
       </section>
-      <section className=" cf mt-12 lg:grid grid-cols-12 gap-5 items-center ">
+      <section
+        id="vid"
+        className=" cf mt-12 lg:grid grid-cols-12 gap-5 items-center "
+      >
         <Image
           width={315}
           height={417}
@@ -81,7 +90,10 @@ const Services = () => {
           </p>
         </div>
       </section>
-      <section className=" cf mt-12 lg:grid grid-cols-12 gap-5 items-center ">
+      <section
+        id="sing"
+        className=" cf mt-12 lg:grid grid-cols-12 gap-5 items-center "
+      >
         <Image
           width={315}
           height={417}
@@ -123,7 +135,10 @@ const Services = () => {
           className=" mt-5 col-span-4 w-full"
         />
       </section>
-      <section className=" cf mt-12 lg:grid grid-cols-12 gap-5 items-center ">
+      <section
+        id="da"
+        className=" cf mt-12 lg:grid grid-cols-12 gap-5 items-center "
+      >
         <div className=" col-span-9">
           <h1>Direção artística</h1>
           <p>
