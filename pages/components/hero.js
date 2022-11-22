@@ -7,8 +7,10 @@ const Hero = (props) => {
         <div className=" w-max font-bebas border-[3px] border-accent text-accent px-5 py-2 text-xl uppercase">
           #artista
         </div>
-        <h2 className=" font-bebas uppercase text-4xl sm:text-6xl  2xl:text-8xl mt-10">
-          {props.name} <br />
+        <h2 className="font-bebas uppercase text-4xl sm:text-6xl  2xl:text-8xl mt-10 text-start">
+          {props.name}
+        </h2>
+        <h2 className=" font-bebas uppercase text-4xl sm:text-6xl  2xl:text-8xl">
           <Link
             target="_blank"
             className=" hover:text-accent"

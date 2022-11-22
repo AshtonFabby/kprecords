@@ -3,13 +3,13 @@ import Image from "next/image";
 import AboutComp from "./components/AboutComp";
 import Values from "./components/Value";
 
-import { useState } from "react";
-import Hero from "./components/hero";
-
-import { Swiper, SwiperSlide, Autoplay } from "swiper/react";
-
 import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 import Link from "next/link";
+
+import { useState } from "react";
+import HeroSlider from "./components/slider";
 
 export default function Home() {
   const [aboutImage, setAboutImage] = useState("/images/mission.png");
@@ -41,55 +41,8 @@ export default function Home() {
       </Head>
 
       <main className="">
-        <Swiper
-          spaceBetween={30}
-          slidesPerView={1}
-          loop={true}
-          // onSlideChange={() => console.log("slide change")}
-          // onSwiper={(swiper) => console.log(swiper)}
-          autoplay={{
-            delay: 2500,
-            disableOnInteraction: false,
-          }}
-          modules={Autoplay}
-        >
-          <SwiperSlide>
-            <Hero
-              name="Hélia Sandra"
-              botText="Lançamentos: Mais Tempero"
-              songLink="https://youtu.be/uZUxCjsvILk"
-              about=""
-              heroImage="/images/hela.png"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Hero
-              name="Hélia Sandra2"
-              botText="Lançamentos: Mais Tempero"
-              songLink="https://youtu.be/uZUxCjsvILk"
-              about=""
-              heroImage="/images/hela.png"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Hero
-              name="Hélia Sandra"
-              botText="Lançamentos: Mais Tempero"
-              songLink="https://youtu.be/uZUxCjsvILk"
-              about=""
-              heroImage="/images/hela.png"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Hero
-              name="Hélia Sandra"
-              botText="Lançamentos: Mais Tempero"
-              songLink="https://youtu.be/uZUxCjsvILk"
-              about=""
-              heroImage="/images/hela.png"
-            />
-          </SwiperSlide>
-        </Swiper>
+        <HeroSlider />
+
         <div className="about hidden pt-12 lg:flex px-20">
           <div className="left w-1/2">
             <Image src={aboutImage} height={416} width={750} alt="Mission" />
