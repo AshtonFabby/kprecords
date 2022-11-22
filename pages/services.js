@@ -55,7 +55,7 @@ const Services = () => {
             velit pretium ornare. Adipiscing faucibus nunc tincidunt dictum
             pharetra egestas sit nunc. Tristique vivamus lacinia non cras erat
             lectus congue nisi, quis. Lorem risus sodales a malesuada. Massa sed
-            sed pellentesque arcu commodo aliquam, sit.{" "}
+            sed pellentesque arcu commodo aliquam, sit.
           </p>
         </div>
         <Image

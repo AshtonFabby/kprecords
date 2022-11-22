@@ -82,9 +82,8 @@ const About = () => {
             />
             <h1 className=" text-white">nossa Motivação</h1>
             <p className="hidden">
-              Ser uma produtora de referência em Angola e além fronteiras,
-              proporcionando experiências únicas e uma gama de produtos e
-              serviços de excelência.
+              A satisfação de podermos ser o veículo de transformação e
+              realização de muitos
             </p>
           </div>
         </div>
@@ -139,24 +138,24 @@ const About = () => {
             />
           </div>
         </div>
-        <div className=" mt-12">
-          <div className="content grid grid-cols-12 gap-5">
+        <div className=" my-20">
+          <div className="content">
             <div className="left col-span-4 row-span-2">
               <div className=" team-card flex flex-col justify-center items-center gap-3  mb-5">
                 <h1 className=" text-6xl text-center mb-5">O TEAM</h1>
                 <Image
                   src="/images/chief.png"
-                  height={511}
-                  width={564}
+                  height={211}
+                  width={264}
                   alt=""
                 />
-                <h2 className=" font-bebas text-5xl mt-5 text-center">
+                <h2 className=" font-bebas text-3xl mt-5 text-center">
                   Márcia Lima
                 </h2>
-                <p className="text-center text-3xl">Directora Geral</p>
+                <p className="text-center text-xl">Directora Geral</p>
               </div>
             </div>
-            <div className="right grid gap-5 md:grid-cols-2 col-span-8">
+            <div className="right grid md:grid-cols-2 lg:grid-cols-4 gap-3 justify-center mt-10 xl:px-32 ">
               <TeamCard
                 image="/images/02.png"
                 name="Norberto benjamim"

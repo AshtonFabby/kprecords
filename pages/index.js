@@ -45,12 +45,13 @@ export default function Home() {
           spaceBetween={30}
           slidesPerView={1}
           loop={true}
-          onSlideChange={() => console.log("slide change")}
-          onSwiper={(swiper) => console.log(swiper)}
+          // onSlideChange={() => console.log("slide change")}
+          // onSwiper={(swiper) => console.log(swiper)}
           autoplay={{
             delay: 2500,
             disableOnInteraction: false,
           }}
+          modules={Autoplay}
         >
           <SwiperSlide>
             <Hero
@@ -63,7 +64,7 @@ export default function Home() {
           </SwiperSlide>
           <SwiperSlide>
             <Hero
-              name="Hélia Sandra"
+              name="Hélia Sandra2"
               botText="Lançamentos: Mais Tempero"
               songLink="https://youtu.be/uZUxCjsvILk"
               about=""
@@ -177,15 +178,15 @@ export default function Home() {
           <div className="content">
             <h1 className="">Banda Kompasso</h1>
             <p className=" mt-3 text-justify">
-              Criada por Neves em 2019 composta por 6 integrantes atualmente,
-              anteriormente composta por 8 elementos teve o seu nome sugerido
-              pelo agente Mauro Lima, teve sua primeira apresentação em 2019
-              logo após começou a receber seus trabalhos mais profissionais, já
-              tocou com cantores conceituados como Walter Ananás, Lil Saint,
-              Anna Joyce, CEF tanzy, Cristo, Conde, Euclides da Lomba, tocaram
-              em eventos como Canta e encanta 2º edição em 2020, teve seu
-              primeiro contrato em 2021 com Unidade Africana, A Banda é formada
-              por estudantes de Engenharia e professores.
+              Criada em 2019 por Neves, é hoje uma das bandas mais proeminentes
+              em Angola. O Nome Kompasso foi sugerido pelo atual agente da banda
+              (Mauro Lima ) e significa orientação /direção. A Banda Kompasso
+              conta atualmente com 6 (seis) membro; 2 pianistas, 1 baterista, 1
+              baixista, 1 guitarrista e 1 percussionista. De entre muitos
+              cantores renomados no mercado Angolano, a banda kompasso já tocou
+              com Walter Ananás, Euclides da Lomba, Lil Saint, Anna Joyce, CEF
+              Tanzy, Cristo, Conde. Em 2021 foi a banda residente no restaurante
+              Liga Africana e de la pra cá são só sucessos atrás de sucessos !
             </p>
           </div>
           <Image
