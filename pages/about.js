@@ -63,12 +63,12 @@ const About = () => {
               diversidade a cultura e serem agentes de mudança para a sociedade.
             </p>
           </div>
-          <div className="box  px-5 pt-40 pb-5 bg-[url('/images/mission-bg.png')] bg-no-repeat bg-cover col-span-4">
+          <div className="box  px-5 pt-40 pb-5 bg-[url('/images/mission-bg-2.png')] bg-no-repeat bg-cover col-span-4">
             <Icon
               icon="fluent:glasses-28-filled"
               className=" cursor-pointer text-3xl text-accent"
             />
-            <h1 className=" text-white">nossa MISSÃO</h1>
+            <h1 className=" text-white">nossa VISÃO</h1>
             <p>
               Ser uma produtora de referência em Angola e além fronteiras,
               proporcionando experiências únicas e uma gama de produtos e
@@ -81,7 +81,7 @@ const About = () => {
               className=" cursor-pointer text-3xl text-accent"
             />
             <h1 className=" text-white">nossa Motivação</h1>
-            <p className="hidden">
+            <p className="">
               A satisfação de podermos ser o veículo de transformação e
               realização de muitos
             </p>
@@ -107,7 +107,7 @@ const About = () => {
           <div className=" mt-10 grid md:grid-cols-3 gap-5">
             <Values
               number="01."
-              title="Paixão e Fe"
+              title="Paixão e FÉ"
               content="fazer o que se gosta e gostar do
                 que se faz, acreditando sempre
                 que Deus vai fazer acontecer"

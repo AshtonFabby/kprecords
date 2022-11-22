@@ -16,24 +16,23 @@ const Artists = () => {
         <div className="description my-12">
           <h1 className=" text-center">ARTISTAS KP </h1>
           <p className=" text-center">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh
-            facilisi ullamcorper leo condimentum habitasse praesent sed maecenas
-            egestas. Diam ultricies quam sit vestibulum. Facilisis id purus
-            velit pretium ornare. Adipiscing faucibus nunc tincidunt dictum
-            pharetra egestas sit nunc. Tristique vivamus lacinia non cras erat
-            lectus congue nisi, quis. Lorem risus sodales a malesuada. Massa sed
-            sed pellentesque arcu commodo aliquam, sit.
+            Todos os nossos artistas são selecionados a dedo. A KP faz questão
+            de se manter verdadeira aos seus ideias: “Descobrir, Capacitar e
+            Integrar Talentos Anónimos”. A nossa casa é repleta de de
+            diversificação; desde cantores de RAP e R&B - cantores de Morna e
+            música Gospel. Dias após dias vamos dando passos com cada um dos
+            nossos artistas e todos Tornamos Sonhos em Realidade.
           </p>
         </div>
 
         <div className="artists grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          <ArtistItem image="/images/helia.png" name="HELIA SANDRA" />
-          <ArtistItem image="/images/alreo.png" name="ALIRIO FORTUNATO" />
+          <ArtistItem image="/images/helia.png" name="HÉLIA SANDRA" />
+          <ArtistItem image="/images/alreo.png" name="ALÍRIO FORTUNATO" />
           <ArtistItem image="/images/luana.png" name="LUANA PRAIA " />
-          <ArtistItem image="/images/suh.png" name="SUH VALENTE" />
-          <ArtistItem image="/images/alirio.png" name="Adolveira Massaqui" />
-          <ArtistItem image="/images/daniel.png" name="DANIEL CORREIA" />
-          <ArtistItem image="/images/artist.png" name="Nádia Canga" />
+          <ArtistItem image="/images/daniel.png" name="SUH VALENTE" />
+          <ArtistItem image="/images/adolvera.png" name="Adolveira Massaqui" />
+          <ArtistItem image="/images/alirio.png" name="DANIEL CORREIA" />
+          <ArtistItem image="/images/nadia.png" name="Nádia Canga" />
           <ArtistItem image="/images/artist.png" name="Ngunza Manuel" />
           <ArtistItem image="/images/artist.png" name="BANDA KOMPASSO" />
         </div>

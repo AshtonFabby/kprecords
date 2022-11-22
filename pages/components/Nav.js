@@ -2,12 +2,15 @@ import Image from "next/image";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
 
+import { useRouter } from "next/router";
+
 import { useState } from "react";
 
 const Nav = () => {
   const [ishown, setIsShown] = useState(false);
   const [ishown2, setIsShown2] = useState(false);
   const [toggle, setToggle] = useState(false);
+  const router = useRouter();
   const showNav = (e) => {
     const flow = document.querySelector("#overflow");
     const left = document.querySelector("#left");
@@ -47,13 +50,26 @@ const Nav = () => {
         {/* middle nav */}
 
         <div className="middlenav text-lg sm:flex gap-5 hidden ">
-          <Link href="/">
+          <Link
+            href="/"
+            className={
+              router.pathname == "/" ? " border-b-2 border-accent" : ""
+            }
+          >
             <p className=" hover:text-accent duration-300">Home</p>
           </Link>
-          <Link href="/about">
+          <Link
+            className={
+              router.pathname == "/about" ? " border-b-2 border-accent" : ""
+            }
+            href="/about"
+          >
             <p className=" hover:text-accent duration-300">Sobre a KP</p>
           </Link>
           <button
+            className={
+              router.pathname == "/artists" ? " border-b-2 border-accent" : ""
+            }
             onMouseEnter={() => setIsShown(true)}
             onMouseLeave={() => setIsShown(false)}
           >
@@ -66,16 +82,33 @@ const Nav = () => {
             </p>
             {ishown && (
               <div className=" absolute z-50 bg-[#0c0c0c] grid gap-4  p-3">
-                <Link href="/artists">
+                <Link
+                  className={
+                    router.pathname == "/artists"
+                      ? " border-b-2 border-accent"
+                      : ""
+                  }
+                  href="/artists"
+                >
                   <p className=" hover:text-accent">Cantores</p>
                 </Link>
-                <Link href="/band">
+                <Link
+                  className={
+                    router.pathname == "/band"
+                      ? " border-b-2 border-accent"
+                      : ""
+                  }
+                  href="/band "
+                >
                   <p className=" hover:text-accent">Banda Kompasso</p>
                 </Link>
               </div>
             )}
           </button>
           <button
+            className={
+              router.pathname == "/services" ? " border-b-2 border-accent" : ""
+            }
             onMouseEnter={() => setIsShown2(true)}
             onMouseLeave={() => setIsShown2(false)}
           >
@@ -105,16 +138,26 @@ const Nav = () => {
                     Fotografia e Produção de Videoclipes
                   </p>
                 </Link>
-                <Link href="/services">
+                <Link href="/services#instrument">
                   <p className=" hover:text-accent">Aulas de Instrumentos</p>
                 </Link>
               </div>
             )}
           </button>
-          <Link href="/projects">
+          <Link
+            className={
+              router.pathname == "/projects" ? " border-b-2 border-accent" : ""
+            }
+            href="/projects"
+          >
             <p className=" hover:text-accent duration-300">Projectos</p>
           </Link>
-          <Link href="/contact">
+          <Link
+            className={
+              router.pathname == "/contact" ? " border-b-2 border-accent" : ""
+            }
+            href="/contact"
+          >
             <p className=" hover:text-accent duration-300">Contactos</p>
           </Link>
         </div>
@@ -128,10 +171,7 @@ const Nav = () => {
           >
             <Icon icon="uit:facebook-f" className=" cursor-pointer" />
           </Link>
-          <Link
-            href="https://instagram.com/kprecords_oficial?igshid=YWJhMjlhZTc="
-            target="_blank"
-          >
+          <Link href="https://instagram.com/kprecords_oficial" target="_blank">
             <Icon icon="bxl:instagram" className=" cursor-pointer" />
           </Link>
           <Link

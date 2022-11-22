@@ -60,27 +60,44 @@ const Footer = () => {
           </p>
 
           <div className="links flex gap-6 mt-3">
-            <div className="link flex gap-2 items-center">
-              <Icon
-                icon="uit:facebook-f"
-                className=" cursor-pointer text-accent"
-              />
-              <p className="hidden sm:block">KP Records</p>
-            </div>
-            <div className="link flex gap-2 items-center">
-              <Icon
-                icon="bxl:instagram"
-                className=" cursor-pointer text-accent"
-              />
-              <p className="hidden sm:block">kprecords_oficial</p>
-            </div>
-            <div className="link flex gap-2 items-center">
-              <Icon
-                icon="ph:youtube-logo-light"
-                className=" cursor-pointer text-accent"
-              />
-              <p className="hidden sm:block">KP Records</p>
-            </div>
+            <Link
+              href="https://www.facebook.com/kprecordscompany?mibextid=LQQJ4d"
+              target="_blank"
+            >
+              <div className="link flex gap-2 items-center">
+                <Icon
+                  icon="uit:facebook-f"
+                  className=" cursor-pointer text-accent"
+                />
+                <p className="hidden sm:block hover:text-accent">KP Records</p>
+              </div>
+            </Link>
+            <Link
+              href="https://instagram.com/kprecords_oficial"
+              target="_blank"
+            >
+              <div className="link flex gap-2 items-center">
+                <Icon
+                  icon="bxl:instagram"
+                  className=" cursor-pointer text-accent"
+                />
+                <p className="hidden sm:block hover:text-accent">
+                  kprecords_oficial
+                </p>
+              </div>
+            </Link>
+            <Link
+              href="https://youtube.com/@kprecordsheliasandra"
+              target="_blank"
+            >
+              <div className="link flex gap-2 items-center">
+                <Icon
+                  icon="ph:youtube-logo-light"
+                  className=" cursor-pointer text-accent"
+                />
+                <p className="hidden sm:block hover:text-accent">KP Records</p>
+              </div>
+            </Link>
           </div>
         </div>
       </div>

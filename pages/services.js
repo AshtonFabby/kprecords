@@ -114,7 +114,10 @@ const Services = () => {
           </p>
         </div>
       </section>
-      <section className=" cf mt-12 lg:grid grid-cols-12 gap-5 items-center ">
+      <section
+        id="instrument"
+        className=" cf mt-12 lg:grid grid-cols-12 gap-5 items-center "
+      >
         <div className=" col-span-8">
           <h1>Aulas de Instrumentais</h1>
           <p>
