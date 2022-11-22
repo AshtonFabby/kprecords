@@ -14,7 +14,7 @@ const Hero = (props) => {
           <Link
             target="_blank"
             className=" hover:text-accent"
-            href={props.songLink}
+            href={props.songLink ?? ""}
           >
             {props.botText}
           </Link>
