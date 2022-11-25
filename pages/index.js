@@ -28,7 +28,13 @@ export default function Home() {
       "01. Paixão e Fé, 02. Integridade, 03 Autenticidade, 04 Criatividade, 05 trabalho em equipa, _________"
     );
   };
-  const changeMission = () => {};
+  const changeMission = () => {
+    setAboutImage("/images/mission.png");
+
+    setAboutText(
+      "Descobrir, Capacitar e Integrar talentos anónimos no mercado artístico, dando-lhes a oportunidade de desenvolverem as suas habilidades, de modo a realizarem os seus sonhos, agregarem diversidade a cultura e serem agentes de mudança para a sociedade."
+    );
+  };
   return (
     <div className="">
       <Head>

@@ -21,8 +21,17 @@ const HeroSlider = () => {
       </div>
       <div>
         <Hero
-          name="Hélia Sandra"
-          botText="Lançamentos: Mais Tempero"
+          name="ALÍRIO FORTUNATO"
+          botText="Lançamentos: Teu Tarraxo"
+          songLink="https://youtu.be/jIaG3UddVSY"
+          about=""
+          heroImage="/images/hela.png"
+        />
+      </div>
+      <div>
+        <Hero
+          name="LUANA PRAIA"
+          botText="Lançamentos: Brevemente"
           songLink="https://youtu.be/uZUxCjsvILk"
           about=""
           heroImage="/images/hela.png"
@@ -30,8 +39,44 @@ const HeroSlider = () => {
       </div>
       <div>
         <Hero
-          name="Hélia Sandra"
-          botText="Lançamentos: Mais Tempero"
+          name="SUH VALENTE"
+          botText="Lançamentos: Brevemente"
+          songLink="https://youtu.be/uZUxCjsvILk"
+          about=""
+          heroImage="/images/hela.png"
+        />
+      </div>
+      <div>
+        <Hero
+          name="Adolveira Massaqui"
+          botText="Lançamentos: Brevemente"
+          songLink="https://youtu.be/uZUxCjsvILk"
+          about=""
+          heroImage="/images/hela.png"
+        />
+      </div>
+      <div>
+        <Hero
+          name="DANIEL CORREIA"
+          botText="Lançamentos: Brevemente"
+          songLink="https://youtu.be/uZUxCjsvILk"
+          about=""
+          heroImage="/images/hela.png"
+        />
+      </div>
+      <div>
+        <Hero
+          name="Nádia Canga"
+          botText="Lançamentos: Brevemente"
+          songLink="https://youtu.be/uZUxCjsvILk"
+          about=""
+          heroImage="/images/hela.png"
+        />
+      </div>
+      <div>
+        <Hero
+          name="Ngunza Manuel"
+          botText="Lançamentos: Brevemente"
           songLink="https://youtu.be/uZUxCjsvILk"
           about=""
           heroImage="/images/hela.png"
