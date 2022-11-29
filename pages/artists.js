@@ -1,13 +1,8 @@
 import Head from "next/head";
 import ArtistItem from "./components/artistItem";
-import PocketBase from "pocketbase";
 import Link from "next/link";
 
 const Artists = ({ records }) => {
-  const pb = new PocketBase("https://kp-records.fly.dev");
-  // console.log(pb.collection("artists"));
-  // const recordName = records
-  // console.log(records.items);
   return (
     <main>
       <Head>
@@ -32,23 +27,14 @@ const Artists = ({ records }) => {
         </div>
 
         <div className="artists grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {/* <ArtistItem image="/images/helia.png" name="HÉLIA SANDRA" />
-          <ArtistItem image="/images/alreo.png" name="ALÍRIO FORTUNATO" />
-          <ArtistItem image="/images/luana.png" name="LUANA PRAIA " />
-          <ArtistItem image="/images/daniel.png" name="SUH VALENTE" />
-          <ArtistItem image="/images/adolvera.png" name="Adolveira Massaqui" />
-          <ArtistItem image="/images/alirio.png" name="DANIEL CORREIA" />
-          <ArtistItem image="/images/nadia.png" name="Nádia Canga" />
-          <ArtistItem image="/images/artist.png" name="Ngunza Manuel" />
-          <ArtistItem image="/images/artist.png" name="BANDA KOMPASSO" /> */}
-
           {records.items.map((record) => {
             return (
               <Link key={record.id} href={`/artist/${record.id}`}>
                 <ArtistItem
                   // image={record.picture}
-                  image={`https://kp-records.fly.dev/api/files/2covfywhfyvfpc7/${record.id}/${record.picture}`}
+                  image={`https://kp-records.fly.dev/api/files/${record.collectionId}/${record.id}/${record.picture}`}
                   name={record.name}
+                  className=""
                 />
               </Link>
             );

@@ -15,7 +15,7 @@ const HeroSlider = () => {
           name="Hélia Sandra"
           botText="Lançamentos: Mais Tempero"
           songLink="https://youtu.be/uZUxCjsvILk"
-          about=""
+          link="xycebtoncifvd1s"
           heroImage="/images/hela.png"
         />
       </div>
@@ -24,7 +24,7 @@ const HeroSlider = () => {
           name="ALÍRIO FORTUNATO"
           botText="Lançamentos: Teu Tarraxo"
           songLink="https://youtu.be/jIaG3UddVSY"
-          about=""
+          link="nowbuuexxqtc75f"
           heroImage="/images/hela.png"
         />
       </div>
@@ -32,8 +32,8 @@ const HeroSlider = () => {
         <Hero
           name="LUANA PRAIA"
           botText="Lançamentos: Brevemente"
-          songLink="https://youtu.be/uZUxCjsvILk"
-          about=""
+          songLink="#"
+          link="9x57sjejbuegpn8"
           heroImage="/images/hela.png"
         />
       </div>
@@ -41,17 +41,17 @@ const HeroSlider = () => {
         <Hero
           name="SUH VALENTE"
           botText="Lançamentos: Brevemente"
-          songLink="https://youtu.be/uZUxCjsvILk"
-          about=""
+          songLink="#"
+          link="9b7ughmztoimbmy"
           heroImage="/images/hela.png"
         />
       </div>
       <div>
         <Hero
-          name="Adolveira Massaqui"
+          name="Lialzio Adolveira"
           botText="Lançamentos: Brevemente"
-          songLink="https://youtu.be/uZUxCjsvILk"
-          about=""
+          songLink="#"
+          link="b51zilg2y907gvr"
           heroImage="/images/hela.png"
         />
       </div>
@@ -59,29 +59,29 @@ const HeroSlider = () => {
         <Hero
           name="DANIEL CORREIA"
           botText="Lançamentos: Brevemente"
-          songLink="https://youtu.be/uZUxCjsvILk"
-          about=""
+          songLink="#"
+          link="c24i7csyur0e3w7"
           heroImage="/images/hela.png"
         />
       </div>
       <div>
         <Hero
-          name="Nádia Canga"
+          name="Laisa Canga"
           botText="Lançamentos: Brevemente"
-          songLink="https://youtu.be/uZUxCjsvILk"
-          about=""
+          songLink="#"
+          link="efztr1y6b4j5xn7"
           heroImage="/images/hela.png"
         />
       </div>
-      <div>
+      {/* <div>
         <Hero
           name="Ngunza Manuel"
           botText="Lançamentos: Brevemente"
-          songLink="https://youtu.be/uZUxCjsvILk"
-          about=""
+          songLink="#"
+          link=""
           heroImage="/images/hela.png"
         />
-      </div>
+      </div> */}
     </Carousel>
   );
 };

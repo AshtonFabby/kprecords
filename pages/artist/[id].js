@@ -3,16 +3,21 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Artist = ({ records }) => {
-  console.log(records);
   return (
     <main>
       <Head>
-        <title>artist name</title>
+        <title>{records.name}</title>
         <meta name="description" content="Transformando Sonhos em realidade" />
         <link rel="icon" href="/images/logo.png" />
       </Head>
       <div className="cf">
-        <Image src="/images/alreo-02.png" width={671} height={552} alt="" />
+        <Image
+          src={`https://kp-records.fly.dev/api/files/${records.collectionId}/${records.id}/${records.banner_picture}`}
+          width={671}
+          height={552}
+          alt=""
+          className="w-[671px] h-[552px] object-contain"
+        />
         <div className=" lg:mt-[-400px] mb-60 lg:ml-[330px] lg:w-[637px] xl:w-[770px]">
           <div className=" md:flex  mt-5 gap-5 items-baseline">
             <h2 className="font-bebas uppercase text-4xl sm:text-6xl  2xl:text-8xl text-start">
@@ -71,38 +76,18 @@ const Artist = ({ records }) => {
       <div className="cf mt-[300px] md:mt-[430px] lg:mt-20 ">
         <h1 className=" text-center">Trabalhos Recentes</h1>
         <div className=" grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5  justify-evenly gap-5 mt-5 ">
-          <Link href="https://youtu.be/uZUxCjsvILk" target="_blank">
-            <Image
-              src="/images/album.png"
-              height={258}
-              width={258}
-              alt="recent"
-            />
-          </Link>
-          <Link href="https://youtu.be/jIaG3UddVSY" target="_blank">
-            <Image
-              src="/images/album-02.png"
-              height={258}
-              width={258}
-              alt="recent"
-            />
-          </Link>
-          <Link href="https://youtu.be/uZUxCjsvILk" target="_blank">
-            <Image
-              src="/images/album-03.png"
-              height={258}
-              width={258}
-              alt="recent"
-            />
-          </Link>
-          <Link href="https://youtu.be/uZUxCjsvILk" target="_blank">
-            <Image
-              src="/images/album-04.png"
-              height={258}
-              width={258}
-              alt="recent"
-            />
-          </Link>
+          {records.expand.songs.map((song) => {
+            return (
+              <Link href={song.song_link} key={song.id} target="_blank">
+                <Image
+                  src={`https://kp-records.fly.dev/api/files/${song.collectionId}/${song.id}/${song.song_cover_image}`}
+                  height={258}
+                  width={258}
+                  alt={song.song_title}
+                />
+              </Link>
+            );
+          })}
         </div>
       </div>
     </main>
@@ -110,10 +95,9 @@ const Artist = ({ records }) => {
 };
 
 export const getServerSideProps = async (pageContext) => {
-  console.log(pageContext);
   const userid = pageContext.query.id;
   const res = await fetch(
-    `https://kp-records.fly.dev/api/collections/artists/records/${userid}`
+    `https://kp-records.fly.dev/api/collections/artists/records/${userid}?expand=songs,social_media`
   );
   const records = await res.json();
   return {
