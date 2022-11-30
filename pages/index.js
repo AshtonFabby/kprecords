@@ -9,7 +9,7 @@ import { useState } from "react";
 import HeroSlider from "./components/slider";
 
 export default function Home() {
-  const [aboutImage, setAboutImage] = useState("/images/mission.png");
+  const [aboutImage, setAboutImage] = useState("/images/mission-02.png");
   const [aboutText, setAboutText] = useState(
     "Descobrir, Capacitar e Integrar talentos anónimos no mercado artístico, dando-lhes a oportunidade de desenvolverem as suas habilidades, de modo a realizarem os seus sonhos, agregarem diversidade a cultura e serem agentes de mudança para a sociedade."
   );
@@ -29,7 +29,7 @@ export default function Home() {
     );
   };
   const changeMission = () => {
-    setAboutImage("/images/mission.png");
+    setAboutImage("/images/mission-02.png");
 
     setAboutText(
       "Descobrir, Capacitar e Integrar talentos anónimos no mercado artístico, dando-lhes a oportunidade de desenvolverem as suas habilidades, de modo a realizarem os seus sonhos, agregarem diversidade a cultura e serem agentes de mudança para a sociedade."
@@ -132,7 +132,9 @@ export default function Home() {
         </div>
         <div className="band cf flex items-center flex-col-reverse gap-3 lg:flex-row mt-10 bg-[url(/images/band-bg.png)] bg-cover py-12 ">
           <div className="content">
-            <h1 className="">Banda Kompasso</h1>
+            <Link href="/band">
+              <h1 className="">Banda Kompasso</h1>
+            </Link>
             <p className=" mt-3 text-justify">
               Criada em 2019 por Neves, é hoje uma das bandas mais proeminentes
               em Angola. O Nome Kompasso foi sugerido pelo atual agente da banda
