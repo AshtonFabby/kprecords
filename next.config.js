@@ -8,6 +8,6 @@ module.exports = nextConfig;
 
 module.exports = {
   images: {
-    domains: ["kp-records.fly.dev"],
+    domains: ["139.162.217.202"],
   },
 };

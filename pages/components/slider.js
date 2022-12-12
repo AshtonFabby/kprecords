@@ -15,7 +15,7 @@ const HeroSlider = () => {
           name="Hélia Sandra"
           botText="Lançamentos: Mais Tempero"
           songLink="https://youtu.be/uZUxCjsvILk"
-          link="wf5r5da3efa8f0f"
+          link="xycebtoncifvd1s"
           heroImage="/images/hela.png"
         />
       </div>
@@ -24,7 +24,7 @@ const HeroSlider = () => {
           name="ALÍRIO FORTUNATO"
           botText="Lançamentos: Teu Tarraxo"
           songLink="https://youtu.be/jIaG3UddVSY"
-          link="db54mo4fvn1ptd6"
+          link="nowbuuexxqtc75f"
           heroImage="/images/hela.png"
         />
       </div>
@@ -33,7 +33,7 @@ const HeroSlider = () => {
           name="LUANA PRAIA"
           botText="Lançamentos: Brevemente"
           songLink="#"
-          link="b8tgkjzohblm9v7"
+          link="9x57sjejbuegpn8"
           heroImage="/images/hela.png"
         />
       </div>
@@ -42,7 +42,7 @@ const HeroSlider = () => {
           name="SUH VALENTE"
           botText="Lançamentos: Brevemente"
           songLink="#"
-          link="k6hqy1tdtya2on7"
+          link="9b7ughmztoimbmy"
           heroImage="/images/hela.png"
         />
       </div>
@@ -60,7 +60,7 @@ const HeroSlider = () => {
           name="DANIEL CORREIA"
           botText="Lançamentos: Brevemente"
           songLink="#"
-          link="x57imqdo4yis2gh"
+          link="c24i7csyur0e3w7"
           heroImage="/images/hela.png"
         />
       </div>
@@ -69,7 +69,7 @@ const HeroSlider = () => {
           name="Laisa Canga"
           botText="Lançamentos: Brevemente"
           songLink="#"
-          link="9r9t34lj4exo128"
+          link="efztr1y6b4j5xn7"
           heroImage="/images/hela.png"
         />
       </div>

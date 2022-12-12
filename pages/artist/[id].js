@@ -3,8 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Artist = ({ records }) => {
-  // console.log(records);
-  const songs = records.expand.songs;
+  console.log(records);
+  const songs = records?.expand?.songs;
   return (
     <main>
       <Head>
@@ -14,7 +14,7 @@ const Artist = ({ records }) => {
       </Head>
       <div className="cf">
         <Image
-          src={`https://kp-records.fly.dev/api/files/${records.collectionId}/${records.id}/${records.banner_picture}`}
+          src={`http://139.162.217.202:8090/api/files/${records.collectionId}/${records.id}/${records.banner_picture}`}
           width={671}
           height={552}
           alt=""
@@ -78,22 +78,18 @@ const Artist = ({ records }) => {
       <div className="cf mt-[300px] md:mt-[430px] lg:mt-20 ">
         <h1 className=" text-center">Trabalhos Recentes</h1>
         <div className=" grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5  justify-evenly gap-5 mt-5 ">
-          {songs.song_title !== "no song" ? (
-            songs.map((song) => {
-              return (
-                <Link href={song.song_link} key={song.id} target="_blank">
-                  <Image
-                    src={`https://kp-records.fly.dev/api/files/${song.collectionId}/${song.id}/${song.song_cover_image}`}
-                    height={258}
-                    width={258}
-                    alt={song.song_title}
-                  />
-                </Link>
-              );
-            })
-          ) : (
-            <p>No releases yet</p>
-          )}
+          {songs?.map((song) => {
+            return (
+              <Link href={song.song_link} key={song.id} target="_blank">
+                <Image
+                  src={`http://139.162.217.202:8090/api/files/${song.collectionId}/${song.id}/${song.song_cover_image}`}
+                  height={258}
+                  width={258}
+                  alt={song.song_title}
+                />
+              </Link>
+            );
+          })}
         </div>
       </div>
     </main>
@@ -103,7 +99,7 @@ const Artist = ({ records }) => {
 export const getServerSideProps = async (pageContext) => {
   const userid = pageContext.query.id;
   const res = await fetch(
-    `https://kp-records.fly.dev/api/collections/artists/records/${userid}?expand=songs,social_media`
+    `http://139.162.217.202:8090/api/collections/artists/records/${userid}?expand=songs,social_media`
   );
   const records = await res.json();
   return {
