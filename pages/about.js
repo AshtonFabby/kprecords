@@ -42,14 +42,14 @@ const About = () => {
           </div>
 
           <Image
-            className=" col-span-5"
+            className="mt-10 md:mt-0 col-span-5"
             src="/images/studio.png"
             height={409}
             width={503}
             alt="kp something"
           />
         </div>
-        <div className="boxes mt-[300px] md:mt-[420px] lg:mt-12 grid gap-5 md:grid-cols-8 lg:grid-cols-12">
+        <div className="boxes mt-20 md:mt-[420px] lg:mt-12 grid gap-5 md:grid-cols-8 lg:grid-cols-12">
           <div className="box  px-5 pt-40 pb-5 bg-[url('/images/mission-bg.png')] bg-no-repeat bg-cover col-span-4">
             <Icon
               icon="entypo:rocket"

@@ -32,7 +32,7 @@ const Artists = ({ records }) => {
               <Link key={record.id} href={`/artist/${record.id}`}>
                 <ArtistItem
                   // image={record.picture}
-                  image={`http://139.162.217.202:8090/api/files/${record.collectionId}/${record.id}/${record.picture}`}
+                  image={`${process.env.NEXT_PUBLIC_API_URL}/api/files/${record.collectionId}/${record.id}/${record.picture}`}
                   name={record.name}
                   className=""
                 />
@@ -47,7 +47,7 @@ const Artists = ({ records }) => {
 
 export async function getStaticProps() {
   const res = await fetch(
-    "http://139.162.217.202:8090/api/collections/artists/records"
+    `${process.env.NEXT_PUBLIC_API_URL}/api/collections/artists/records`
   );
   const records = await res.json();
   return {

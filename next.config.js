@@ -8,6 +8,6 @@ module.exports = nextConfig;
 
 module.exports = {
   images: {
-    domains: ["139.162.217.202"],
+    domains: [process.env.NEXT_PUBLIC_DOMAIN],
   },
 };

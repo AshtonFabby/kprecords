@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Hero = (props) => {
   return (
-    <div className="hero bg-[url('/images/hela-mobile.png')] sm:bg-[url('/images/hela.png')] bg-no-repeat max-sm:bg-cover sm:bg-right flex flex-col justify-center h-[60vh]">
+    <div className={props.heroclass}>
       <div className=" w-max container">
         <div className=" w-max font-bebas border-[3px] border-accent text-accent px-5 py-2 text-xl uppercase">
           #artista

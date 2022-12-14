@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Artist = ({ records }) => {
-  console.log(records);
   const songs = records?.expand?.songs;
   return (
     <main>
@@ -14,13 +13,13 @@ const Artist = ({ records }) => {
       </Head>
       <div className="cf">
         <Image
-          src={`http://139.162.217.202:8090/api/files/${records.collectionId}/${records.id}/${records.banner_picture}`}
+          src={`${process.env.NEXT_PUBLIC_API_URL}/api/files/${records.collectionId}/${records.id}/${records.banner_picture}`}
           width={671}
           height={552}
           alt=""
-          className="w-[671px] h-[552px] object-contain"
+          className="lg:w-[671px] lg:h-[552px] object-contain"
         />
-        <div className=" lg:mt-[-400px] mb-60 lg:ml-[330px] lg:w-[637px] xl:w-[770px]">
+        <div className=" lg:mt-[-400px] mb-10 lg:mb-60 lg:ml-[330px] lg:w-[637px] xl:w-[770px]">
           <div className=" md:flex  mt-5 gap-5 items-baseline">
             <h2 className="font-bebas uppercase text-4xl sm:text-6xl  2xl:text-8xl text-start">
               {records.name}
@@ -75,14 +74,14 @@ const Artist = ({ records }) => {
         </div>
       </div>
       <div className=" cf">{records.biography_02}</div>
-      <div className="cf mt-[300px] md:mt-[430px] lg:mt-20 ">
+      <div className="cf md:mt-10 lg:mt-20 ">
         <h1 className=" text-center">Trabalhos Recentes</h1>
         <div className=" grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5  justify-evenly gap-5 mt-5 ">
           {songs?.map((song) => {
             return (
               <Link href={song.song_link} key={song.id} target="_blank">
                 <Image
-                  src={`http://139.162.217.202:8090/api/files/${song.collectionId}/${song.id}/${song.song_cover_image}`}
+                  src={`${process.env.NEXT_PUBLIC_API_URL}/api/files/${song.collectionId}/${song.id}/${song.song_cover_image}`}
                   height={258}
                   width={258}
                   alt={song.song_title}
@@ -99,7 +98,7 @@ const Artist = ({ records }) => {
 export const getServerSideProps = async (pageContext) => {
   const userid = pageContext.query.id;
   const res = await fetch(
-    `http://139.162.217.202:8090/api/collections/artists/records/${userid}?expand=songs,social_media`
+    `${process.env.NEXT_PUBLIC_API_URL}/api/collections/artists/records/${userid}?expand=songs,social_media`
   );
   const records = await res.json();
   return {

@@ -210,32 +210,32 @@ const Nav = () => {
           className=" left-full mobile-items absolute z-10 duration-500 ease-out w-full bg-[#141414] sm:hidden "
         >
           <div className="mobile-items sm:hidden text-xl text-right py-10">
-            <Link href="/">
+            <Link href="/" onClick={showNav}>
               <p className=" hover:bg-accent duration-150 px-7 py-3 w-full">
                 Home
               </p>
             </Link>
-            <Link href="/about">
+            <Link href="/about" onClick={showNav}>
               <p className=" hover:bg-accent duration-150 px-7 py-3 w-full">
                 Sobre a KP
               </p>
             </Link>
-            <Link href="/artists">
+            <Link href="/artists" onClick={showNav}>
               <p className=" hover:bg-accent duration-150 px-7 py-3 w-full">
                 Artistas
               </p>
             </Link>
-            <Link href="/services">
+            <Link href="/services" onClick={showNav}>
               <p className=" hover:bg-accent duration-150 px-7 py-3 w-full">
                 Serviços
               </p>
             </Link>
-            <Link href="/projects">
+            <Link href="/projects" onClick={showNav}>
               <p className=" hover:bg-accent duration-150 px-7 py-3 w-full">
                 Projectos
               </p>
             </Link>
-            <Link href="/contact">
+            <Link href="/contact" onClick={showNav}>
               <p className=" hover:bg-accent duration-150 px-7 py-3 w-full">
                 Contactos
               </p>

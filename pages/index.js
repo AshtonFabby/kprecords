@@ -78,20 +78,14 @@ export default function Home() {
         <div className="about container lg:hidden mt-10">
           <h1 className=" uppercase">sobre nós</h1>
           <AboutComp
-            image="/images/mission.png"
+            image="/images/mission-02.png"
             title="nossa MISSÃO"
-            content="sermos um grupo que investe no capital humano e altamente competitivo
-              que actue de forma abrangente no ramo musical, através de um portfólio
-              de produtos de alta qualidade."
+            content="Descobrir, Capacitar e Integrar talentos anónimos no mercado artístico, dando-lhes a oportunidade de desenvolverem as suas habilidades, de modo a realizarem os seus sonhos, agregarem diversidade a cultura e serem agentes de mudança para a sociedade."
           />
           <AboutComp
-            image="/images/mission.png"
+            image="/images/mission-03.png"
             title="nossa VISÃO"
-            content="Ser uma produtora de referência em
-            Angola e além fronteiras,
-            proporcionando experiências únicas e
-            uma gama de produtos e
-            serviços de excelência."
+            content="Ser uma produtora de referência em Angola e além fronteiras, proporcionando experiências únicas e uma gama de produtos e serviços de excelência."
           />
           <div className="values flex flex-col gap-5">
             <h2 className="uppercase text-4xl font-bebas mt-5">
@@ -178,16 +172,16 @@ export default function Home() {
           </div>
 
           <Image
-            className=" col-span-5"
+            className="mt-10 md:mt-0 col-span-5"
             src="/images/band-02.png"
             height={409}
             width={503}
             alt="kp something"
           />
         </div>
-        <div className="cf mt-[300px] md:mt-[430px] lg:mt-20 ">
+        <div className="cf mt-20 md:mt-[430px] lg:mt-20  ">
           <h1 className=" text-center">Trabalhos Recentes</h1>
-          <div className=" grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5  justify-evenly gap-5 mt-5 ">
+          <div className=" grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5 mt-5 ">
             <Link href="https://youtu.be/uZUxCjsvILk" target="_blank">
               <Image
                 src="/images/album.png"
