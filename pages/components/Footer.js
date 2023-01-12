@@ -44,6 +44,12 @@ const Footer = () => {
           <h1 className=" mt-3 lg:mt-0">CONTACTE-NOS</h1>
 
           <p className="mt-2">
+            <Link className=" hover:text-accent" href="tel:+244923545889">
+              +244 923 545 889
+            </Link>
+            /
+          </p>
+          {/* <p className="mt-2">
             <Link className=" hover:text-accent" href="tel:+244923771656">
               +244923771656
             </Link>{" "}
@@ -57,7 +63,7 @@ const Footer = () => {
             >
               geral@kprecordz.com
             </Link>
-          </p>
+          </p> */}
 
           <div className="links flex gap-6 mt-3">
             <Link

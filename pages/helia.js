@@ -136,9 +136,8 @@ const Helia = () => {
           className=" w-full lg:w-8/12 h-[376px] xl:h-[550px] mx-auto"
           src="https://www.youtube.com/embed/uZUxCjsvILk"
           title="YouTube video player"
-          frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
+          allowFullscreen
         ></iframe>
       </div>
       <div className="cf mt-10 xl:flex flex-row-reverse">
