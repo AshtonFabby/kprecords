@@ -47,7 +47,7 @@ const HeroSlider = () => {
           songLink="#"
           link="9b7ughmztoimbmy"
           heroImage="/images/hela.png"
-          heroclass="hero bg-[url('/images/Suh.png')] sm:bg-[url('/images/Suh.png')] bg-no-repeat max-sm:bg-cover sm:bg-right flex flex-col justify-center h-[60vh]"
+          heroclass="hero bg-[url('/images/Suh-2.png')] sm:bg-[url('/images/Suh-2.png')] bg-no-repeat max-sm:bg-cover sm:bg-right flex flex-col justify-center h-[60vh]"
         />
       </div>
       <div>
